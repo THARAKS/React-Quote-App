@@ -1,0 +1,149 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html{
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+    overflow-x: hidden;
+  }
+  p{
+    font-family: sans-serif;
+    font-style: unset;
+    font-size: 14px;
+    text-align: center;
+  }
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: whitesmoke;
+    border-radius: 26px;
+
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+ 
+  textarea,
+  select {
+    font-size: 16px;
+    height: 20px;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: 1px solid black;
+   
+    padding-left: 50px;
+  }
+  
+ 
+  
+  
+  
+  button {
+    padding: 16PX;
+    color: black;
+    background-color:rgb(255, 242, 59) ;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  fieldset {
+    margin-bottom: 10px;
+    border: none;
+  }
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+
+  
+  @media screen and (min-width: 480px) {
+  
+    form {
+      max-width: 480px;
+    }
+  
+  }
+
+  .iconPos{
+    position: relative;
+    top: 26px;
+    left: 10px;
+  }
+ 
+  /* input:invalid {
+    border:1px solid  red;
+} */
+button:disabled,
+button[disabled]{
+  cursor: not-allowed;
+  background-color: gainsboro;
+
+}
+
+form input.error {
+  border-color: red;
+  /* background: url(/cssimages/comment-author.gif) no-repeat scroll 7px 7px;
+  float:right; */
+}
+
+
+.custumBack
+{
+  background: url(images/bg1.jpg) no-repeat;
+  width: 100%;
+  height:auto;
+  background-size: cover;
+
+}
+input {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+}
+ 
+input:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+ 
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+.errorMessage
+{
+  width: 80%;
+    background-color: red;
+    color: white;
+}
