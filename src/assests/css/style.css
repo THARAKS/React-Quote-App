@@ -43,7 +43,7 @@
     margin: 0;
     outline: 0;
     padding: 15px;
-    width: 100%;
+    
     background-color: white;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     border: 1px solid black;
@@ -63,7 +63,6 @@
     text-align: center;
     font-style: normal;
     border-radius: 5px;
-    width: 100%;
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
@@ -120,14 +119,14 @@ form input.error {
 }
 
 
-.custumBack
+/* .custumBack
 {
   background: url(images/bg1.jpg) no-repeat;
   width: 100%;
   height:auto;
   background-size: cover;
 
-}
+} */
 input {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { allQuotes,deleteQuote,editQuote} from '../actions/ActionQuotes';
-import AddQuote from './AddQuote'
+import '../assests/css/style.css'
 
 
 class AllQuotes extends Component {
@@ -82,7 +82,7 @@ class AllQuotes extends Component {
               <tr>
                 <th>Quote</th>
                 <th>Author</th>
-                <th>Edit</th>
+              {/* <th>Edit</th>*/}
                 <th>Delete</th>
               
               </tr>
@@ -94,7 +94,7 @@ class AllQuotes extends Component {
                   <tr key={index}>
                     <td key={quote.text}><input name="quote" type="text" value={quote.text}  onChange={this.handleChangeEvent}/></td>
                     <td key={quote.from}><input  name="author" type="text" value={quote.from} onChange={this.handleChangeEvent}/></td>
-                    <td><button onClick={()=>this.handleEdit(quote,index)}>Edit</button></td>
+                    {/*<td><button onClick={()=>this.handleEdit(quote,index)}>Edit</button></td> */}
                     <td><button onClick={()=>this.deleteQuote(quote)}>Delete</button></td>
                                                  
                   </tr>
@@ -105,10 +105,12 @@ class AllQuotes extends Component {
         </div>
         <div>
           {this.state.addQuote? <div>
-            <input type="text" name="quote" value={this.state.quote} placefolder="enter the quote" onChange={this.handleInputChange}/>
-            <input type="text" name="author" value={this.state.author} placefolder="enter the author" onChange={this.handleInputChange}/>
-             <input type="submit" value="add" onClick={this.addNewQuote}/>  
+           
+            <input type="text" name="quote" required={true} value={this.state.quote} placefolder="enter the quote" onChange={this.handleInputChange}/><span> </span>
+            <input type="text" name="author"required={true}  value={this.state.author} placefolder="enter the author" onChange={this.handleInputChange}/>
+            <span></span> <button type="submit" value="add" onClick={this.addNewQuote}> Add Quote </button>
             </div>:""}
+           
         </div>
         {!this.state.addQuote ? <div>
           <button onClick={this.handleAddMoreQuotes}>Add more quotes</button>
