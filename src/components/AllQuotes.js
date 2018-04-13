@@ -78,8 +78,8 @@ class AllQuotes extends Component {
      
           <div className="table-responsive">
           <table className="table table-striped">
-            <thead>
-              <tr>
+          <thead className="thead-dark">
+          <tr>
                 <th>Quote</th>
                 <th>Author</th>
               {/* <th>Edit</th>*/}
@@ -104,14 +104,16 @@ class AllQuotes extends Component {
           </table>
         </div>
         <div>
-          {this.state.addQuote? <div>
-           
-            <input type="text" name="quote" required={true} value={this.state.quote} placefolder="enter the quote" onChange={this.handleInputChange}/><span> </span>
-            <input type="text" name="author"required={true}  value={this.state.author} placefolder="enter the author" onChange={this.handleInputChange}/>
+       
+          {this.state.addQuote? <div> 
+          
+            <input type="text" placeholder="Enter the Quote" name="quote" required={true} value={this.state.quote} placefolder="enter the quote" onChange={this.handleInputChange}/><span> </span>
+            <input type="text" placeholder="Enter the author" name="author"required={true}  value={this.state.author} placefolder="enter the author" onChange={this.handleInputChange}/>
             <span></span> <button type="submit" value="add" onClick={this.addNewQuote}> Add Quote </button>
             </div>:""}
-           
+         
         </div>
+        
         {!this.state.addQuote ? <div>
           <button onClick={this.handleAddMoreQuotes}>Add more quotes</button>
           </div>:""}
